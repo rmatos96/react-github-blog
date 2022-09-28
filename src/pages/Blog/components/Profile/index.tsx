@@ -27,7 +27,7 @@ export function Profile() {
     <ProfileContainer>
       <img src={profile?.avatar_url} alt="" />
       <h1>{profile?.name}</h1>
-      <GithubIcon to={'https://github.com/rmatos96'}>
+      <GithubIcon target='_blank' href='https://github.com/rmatos96'>
         <span>GITHUB</span>
         <ArrowLineUpRight size={20} color={'#3294F8'}/>
       </GithubIcon>

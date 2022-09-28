@@ -14,6 +14,7 @@ export const SearchFormContainer = styled.form`
   top: 533px;
   padding: 12px 16px;
   gap: 8px;
+  color: ${props => props.theme['base-title']};
 
   background: ${props => props.theme['base-input']};
 
@@ -28,6 +29,11 @@ export const SearchFormContainer = styled.form`
 
     &::placeholder {
       color: ${props => props.theme['base-label']};
+    }
+
+    &:focus {
+      border: 2px solid ${props => props.theme['blue']} !important;
+      outline: none;
     }
   }
 `

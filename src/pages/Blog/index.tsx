@@ -5,7 +5,7 @@ import { api } from "../../lib/axios";
 import { IPost, PostProps, Posts } from "./components/Post";
 import { Profile } from "./components/Profile";
 import SearchForm from "./components/SearchForm";
-import { PostsContainer, PublishedContainer } from "./styles";
+import { FullContainer, PostsContainer, PublishedContainer } from "./styles";
 
 
 export function Blog() {
@@ -27,7 +27,7 @@ export function Blog() {
   }
 
   return (
-    <div>
+    <FullContainer>
       <Profile />
       <PublishedContainer>
         <h2>Publicações</h2>
@@ -41,6 +41,6 @@ export function Blog() {
           })}
         </PostsContainer>
       </PublishedContainer>
-    </div>
+    </FullContainer>
   )
 }

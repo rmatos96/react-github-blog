@@ -16,7 +16,6 @@ export const PostContent = styled.div`
   }    
 
   b{
-    height: 64px;
     left: 32px;
     right: 101px;
     top: 32px;
@@ -35,7 +34,7 @@ export const PostContent = styled.div`
 
   span{
       text-align:center;
-      height: 22px;
+      min-height: 22px;
       right: 32px;
       top: 37px;
 
@@ -49,11 +48,12 @@ export const PostContent = styled.div`
     }
 
     p{
-      position: absolute;
       left: 32px;
       right: 32px;
       top: 116px;
       bottom: 32px;
+
+      margin-top: 1.5rem;
 
       font-family: 'Nunito';
       font-style: normal;
@@ -64,7 +64,7 @@ export const PostContent = styled.div`
       color: ${ props => props.theme['base-text']};
       display: -webkit-box;
       -webkit-box-orient:vertical;
-      -webkit-line-clamp: 4;
+      -webkit-line-clamp: 5;
       overflow: hidden;
     }
 ` 

@@ -55,19 +55,20 @@ export const ProfileContainer = styled.div`
     color: ${props => props.theme['base-text']};
   }
 `
-export const GithubIcon = styled(Link)`
+export const GithubIcon = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 0px;
   
-
   position: absolute;
   width: 67px;
   height: 19px;
   right: 32px;
   top: 40px;
   gap: 2px;
+
+  text-decoration: none;
 
   span{
     width: 47px;

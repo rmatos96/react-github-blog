@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+export const FullContainer = styled.div`
+  height: 100vh;
+`
+
 export const PublishedContainer = styled.div`
   display: flex;
   justify-content: space-between;
