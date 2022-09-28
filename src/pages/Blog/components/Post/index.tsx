@@ -4,28 +4,29 @@ import { api } from "../../../../lib/axios";
 import { PostContent } from "./styles";
 import { ptBR } from "date-fns/locale"
 
-
-export interface PostProps {
+export interface IPost {
   title: string;
   body: string;
   created_at: string;
   number: number;
-  /* html_url: string;
-  comments: number; */ 
 }
 
-export function Posts({ post }: { post: PostProps }) {
-  
+export interface PostProps extends React.HTMLAttributes<HTMLDivElement> {
+  post: IPost
+}
+
+export function Posts({ post: { title, body, created_at }, ...rest }: PostProps) {
+
   return (
-    <PostContent>
+    <PostContent {...rest}>
       <div>
-        <b>{post.title}</b>
-        <span>{formatDistanceToNow(new Date (post.created_at), {
+        <b>{title}</b>
+        <span>{formatDistanceToNow(new Date(created_at), {
           addSuffix: true,
           locale: ptBR
         })}</span>
       </div>
-      <p>{post.body}</p>
+      <p>{body}</p>
     </PostContent>
   )
 }

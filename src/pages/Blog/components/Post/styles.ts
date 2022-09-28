@@ -34,6 +34,7 @@ export const PostContent = styled.div`
   }
 
   span{
+      text-align:center;
       height: 22px;
       right: 32px;
       top: 37px;

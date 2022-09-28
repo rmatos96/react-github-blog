@@ -1,14 +1,15 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../../components/Header";
 import { api } from "../../lib/axios";
-import { PostProps, Posts } from "./components/Post";
+import { IPost, PostProps, Posts } from "./components/Post";
 import { Profile } from "./components/Profile";
 import SearchForm from "./components/SearchForm";
 import { PostsContainer, PublishedContainer } from "./styles";
 
 
 export function Blog() {
-  const [posts, setPosts] = useState<PostProps[]>([]);
+  const [posts, setPosts] = useState<IPost[]>([]);
 
   async function getRepository() {
     const response = await api.get('/search/issues?q=%20repo:rmatos96/github-blog')
@@ -18,6 +19,12 @@ export function Blog() {
   useEffect(() => {
     getRepository()
   }, [])
+
+  const navigate = useNavigate()
+
+  function handleOpenPost(id: number) {
+    navigate(`/post/${id}`)
+  }
 
   return (
     <div>
@@ -29,7 +36,7 @@ export function Blog() {
         <PostsContainer>
           {posts.map((post) => {
             return (
-              <Posts key={post.number} post={post}/>
+              <Posts onClick={() => handleOpenPost(post.number)} key={post.number} post={post}/>
             )
           })}
         </PostsContainer>
