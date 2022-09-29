@@ -24,7 +24,7 @@ export function PostHeader({ title, user, date, comments }: PostHeaderProps) {
         VOLTAR
       </BackIcon>
 
-      <GithubAccess href={`https://github.com/rmatos96/github-blog/issues/${id}`}>
+      <GithubAccess href={`https://github.com/rmatos96/github-blog/issues/${id}`} target='_blank'>
         VER NO GITHUB
         <ArrowLineUpRight size={20} color={'#3294F8'} />
       </GithubAccess>

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import headerBg from "../../assets/cover.svg";
 
 export const HeaderContainer = styled.header`
   width: 100%;
