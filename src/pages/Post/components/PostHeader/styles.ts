@@ -52,7 +52,7 @@ export const BackIcon = styled(Link)`
   color: ${props => props.theme['blue']};
 `
 
-export const GithubAccess = styled.span`
+export const GithubAccess = styled.a`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -71,6 +71,7 @@ export const GithubAccess = styled.span`
   line-height: 160%;
 
   text-transform: uppercase;
+  text-decoration: none;
   color: ${props => props.theme['blue']};
 `
 

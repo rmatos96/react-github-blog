@@ -6,6 +6,7 @@ export const PostContent = styled.div`
   height: 260px;
   top: 350px;
   padding: 2rem;
+  cursor: pointer;
 
   background: ${props => props.theme['base-post']};
   border-radius: 10px;
