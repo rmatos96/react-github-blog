@@ -7,15 +7,19 @@ const schema = z.object({
   query: z.string()
 })
 
+interface SearchInpoutProps{
+  getPosts: (query?:string) => Promise<void>
+}
+
 type SearchFormInput = z.infer<typeof schema>
 
-export default function SearchForm() {
+export default function SearchForm({  getPosts }: SearchInpoutProps) {
   const {register, handleSubmit} = useForm<SearchFormInput>({
     resolver: zodResolver(schema)
   })
 
-  function handleSearchPosts(data: SearchFormInput) {
-    console.log(data);
+  async function handleSearchPosts(data: SearchFormInput) {
+    getPosts(data.query)
   }
 
   return (
