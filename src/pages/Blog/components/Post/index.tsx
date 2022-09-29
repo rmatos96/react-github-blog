@@ -1,8 +1,8 @@
 import { formatDistanceToNow } from "date-fns";
 import { useEffect, useState } from "react";
-import { api } from "../../../../lib/axios";
 import { PostContent } from "./styles";
 import { ptBR } from "date-fns/locale"
+import { relativeDateFormatter } from "../../../../utils/formatter";
 
 export interface IPost {
   title: string;
@@ -16,15 +16,14 @@ export interface PostProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export function Posts({ post: { title, body, created_at }, ...rest }: PostProps) {
+  const dateFormatted = relativeDateFormatter(created_at || '')
+
 
   return (
     <PostContent {...rest}>
       <div>
         <b>{title}</b>
-        <span>{formatDistanceToNow(new Date(created_at), {
-          addSuffix: true,
-          locale: ptBR
-        })}</span>
+        <span>{dateFormatted}</span>
       </div>
       <p>{body}</p>
     </PostContent>

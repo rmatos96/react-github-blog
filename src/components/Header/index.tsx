@@ -1,4 +1,3 @@
-import logoSrc from "../../assets/logo.svg";
 import { HeaderContainer } from './styles'
 
 export default function Header() {

@@ -20,6 +20,7 @@ export const PostContent = styled.div`
     left: 32px;
     right: 101px;
     top: 32px;
+    max-width: 200px;
 
     font-family: 'Nunito';
     font-style: normal;
