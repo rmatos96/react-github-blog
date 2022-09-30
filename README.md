@@ -2,7 +2,7 @@
 
 <h1 align="center">Github Blog</h1>
 <br>
-<p align="center">Desafio proposto pela Rocketseat feito inteiramente react, utilizando a API do github.</p>
+<p align="center">Desafio proposto pela Rocketseat feito inteiramente em react, utilizando a API do github.</p>
 <br>
 <h2>🛠️ Nesse projeto foi utilizado</h2>
 
